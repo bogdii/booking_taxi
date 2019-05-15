@@ -8,7 +8,7 @@ import MyCheckPoint from './MyCheckPoint';
 const MoreHideOptions = ({onClickShowMore, isShowMore, mySelectorOptions,isCheckClick, onCheckPoint}) => (
     <div>
         <Row className='marg'>
-            <Col md={7}>
+            <Col md={7} style={{textAlign: 'left'}}>
                 <small className='small-txt'>For 1-2 passengers with 1-2 bags</small>
             </Col> <Col  style={{color: '#FF4800'}}
                         className='d-flex justify-content-end'>
@@ -26,7 +26,7 @@ const MoreHideOptions = ({onClickShowMore, isShowMore, mySelectorOptions,isCheck
             <div id="example-collapse">
                 <Row>
                     {mySelectorOptions.map((val, key) => {
-                        return <MySelector  key={key} img={val.img} item={val.item}  />
+                        return <MySelector key={key} img={val.img} item={val.item}  />
                     })}
                 </Row>
                 <MyCheckPoint isCheckClick={isCheckClick} onCheckPoint={onCheckPoint}/>
